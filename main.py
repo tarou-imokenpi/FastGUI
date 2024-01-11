@@ -1,14 +1,16 @@
 from FastGUI.window_opener import WindowOpener
-from FastGUI.stack import Vstack, Hstack
-import customtkinter
+from FastGUI.stack import Stack
+from customtkinter import CTkButton, CTkLabel
 
 
-if __name__ == "__main__":
-    with WindowOpener() as window:
-        with Vstack(window) as vstack:
-            vstack.add_stack(customtkinter.CTkLabel(window, text="Hello, world!"))
-            vstack.add_stack(customtkinter.CTkButton(window, text="Hello, world!"))
-
-        with Hstack(window) as hstack:
-            hstack.add_stack(customtkinter.CTkLabel(window, text="Hello, world!"))
-            hstack.add_stack(customtkinter.CTkButton(window, text="Hello, world!"))
+with WindowOpener(window_size=(800, 600)) as window:
+    with Stack(window, direction="v") as stack:
+        stack.add_stack(CTkLabel(window, text="Hello, world!"))
+        stack.add_stack(CTkButton(window, text="Hello, world!"))
+        stack.add_stack(CTkButton(window, text="Hello, world!"))
+        stack.add_stack(CTkButton(window, text="Hello, world!"))
+        stack.add_stack(CTkButton(window, text="Hello, world!"))
+        stack.add_stack(CTkButton(window, text="Hello, world!"))
+        stack.add_stack(CTkButton(window, text="Hello, world!"))
+        stack.add_stack(CTkButton(window, text="Hello, world!"))
+        stack.add_stack(CTkButton(window, text="Hello, world!"))

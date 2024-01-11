@@ -1,2 +1,0 @@
-class Hstack:
-    pass
