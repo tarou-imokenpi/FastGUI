@@ -28,7 +28,7 @@ class WindowOpener(customtkinter.CTk):
         self.geometry(f"{window_size[0]}x{window_size[1]}")
         self.title(title)
 
-    def __enter__(self):
+    def __enter__(self) -> customtkinter.CTk:
         return self
 
     # withが終わったらmainloopを実行する
