@@ -2,7 +2,15 @@ import customtkinter
 
 
 class Stack:
-    """方向を指定してウィジェットを配置する"""
+    """方向を指定してウィジェットを配置する
+
+    example
+    --------
+    ```python
+    with Stack(window, direction="v") as stack:
+        stack.add_stack(CTkLabel(window, text="Hello, world!"))
+    ```
+    """
 
     def __init__(self, window: customtkinter.CTk, direction: str = "v"):
         self.window = window
@@ -21,7 +29,15 @@ class Stack:
 
 
 class Vstack:
-    """垂直方向にウィジェットを配置する"""
+    """垂直方向にウィジェットを配置する
+
+    example
+    --------
+    ```python
+    with Vstack(window) as stack:
+        stack.add_stack(CTkLabel(window, text="Hello, world!"))
+    ```
+    """
 
     def __init__(self, window: customtkinter.CTk):
         self.window = window
@@ -39,7 +55,15 @@ class Vstack:
 
 
 class Hstack:
-    """垂直方向にウィジェットを配置する"""
+    """垂直方向にウィジェットを配置する
+
+    example
+    --------
+    ```python
+    with Hstack(window) as stack:
+        stack.add_stack(CTkLabel(window, text="Hello, world!"))
+    ```
+    """
 
     def __init__(self, window: customtkinter.CTk):
         self.window = window
